@@ -1,0 +1,14 @@
+<% if (title==='Guide' ) {%>
+    <p> This is the guide page.</p>
+
+    <% } else { %>
+        <ul>
+            <% stories.forEach((story)=>{ %>
+                <a class="story-links" href="/api/v1/stories/<%= story.id %>">
+                    <li class="story">
+                        <%= story.name %>
+                    </li>
+                </a>
+                <% }) %>
+        </ul>
+        <% } %>

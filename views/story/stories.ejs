@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akaelumn</title>
+    <link rel="stylesheet" href="/styles/stories/stories.css">
+    <link rel="stylesheet" href="/styles/utils/header.css">
+    <link rel="stylesheet" href="/styles/utils/main-display.css">
+
+</head>
+
+<body>
+    <%- include('../utils/header') %>
+
+
+        <main id="main">
+            <div class="content-container">
+                <h1 class="content-title">
+                    <%= title %>
+                </h1>
+                <div class="main-content">
+                    <% if (requestType==='byEra' ) { %>
+                        <%- include('stories-list') %>
+                            <% } %>
+                                <% if (requestType==='byId' ) { %>
+                                    <%- include('story-frame') %>
+                                        <% } %>
+
+                </div>
+            </div>
+
+        </main>
+
+
+        <%- include('timeline') %>
+
+
+
+
+
+
+            <footer>
+
+            </footer>
+</body>
+
+</html>
