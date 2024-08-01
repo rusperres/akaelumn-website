@@ -11,7 +11,6 @@ mongoose.connect(process.env.CONN_STR, {
     console.log('DB connection successful')
 }).catch((error) => {
     console.log('An error occured')
-
 });
 
 
